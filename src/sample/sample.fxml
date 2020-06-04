@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button id="generateButton" fx:id="generateButton" layoutX="41.0" layoutY="208.0" mnemonicParsing="false" onAction="#code" prefHeight="50.0" prefWidth="200.0" text="Generájl kódot!">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button id="decodeButton" fx:id="decodeButton" layoutX="259.0" layoutY="208.0" mnemonicParsing="false" onAction="#decode" prefHeight="50.0" prefWidth="200.0" text="Dekódold nekem!">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField id="inputTextField" fx:id="inputTextField" layoutX="51.0" layoutY="143.0" prefHeight="50.0" prefWidth="400.0" promptText="Szöveg / Kód">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="66.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RSA kódoló / dekódoló">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField id="resultText" fx:id="resultText" editable="false" layoutX="50.0" layoutY="95.0" prefWidth="400.0" promptText="result" text="">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
