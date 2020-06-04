@@ -11,6 +11,11 @@ public class SecretKey {
         this.d = d;
         this.n = n;
     }
+
+    @Override
+    public String toString() {
+        return "d: " + this.d + " | n: " + this.n;
+    }
 }
 
 

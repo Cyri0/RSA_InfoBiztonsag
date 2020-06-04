@@ -40,5 +40,7 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rsa = new MyRSA();
+        System.out.println("Kulcs: " + rsa.getTheKey());
+        System.out.println("Titkos kulcs: " + rsa.getSecretKey());
     }
 }

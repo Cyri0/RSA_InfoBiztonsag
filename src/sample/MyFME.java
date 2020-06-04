@@ -9,7 +9,6 @@ public class MyFME {
 
         //Step 1
         String bin = B.toString(2); // binárisra váltja
-        System.out.println(bin);
 
         ArrayList<Integer> hatvanyok = new ArrayList<Integer>();
 

@@ -38,7 +38,6 @@ public class MyRSA {
         } while (e.compareTo(BigInteger.ONE) <= 0
                 || e.compareTo(fi_n) >= 0
                 || !e.gcd(fi_n).equals(BigInteger.ONE));
-        BigInteger d = e.modInverse(fi_n);
 
         return e;
     }
@@ -72,14 +71,20 @@ public class MyRSA {
         System.out.println("d: " + d);
 
         // https://elearning.unideb.hu/pluginfile.php/659757/mod_resource/content/1/EA_EEA.pdf
-        // System.out.println("Teszt: " + MyEEA.calculateD(new BigInteger("100"), new BigInteger("35")));
+        // System.out.println("EEA Teszt: " + MyEEA.calculateD(new BigInteger("100"), new BigInteger("35")));
 
+        // https://elearning.unideb.hu/pluginfile.php/659758/mod_resource/content/1/FME.pdf
 
-        // TESZT!!!!
-
-        MyFME.calculateFME(new BigInteger("7"), new BigInteger("256"), new BigInteger("13"));
-
-        //!!!!!!!!!
+        /*
+        System.out.println("\nFME Test begin:");
+        System.out.println("Eredmény: " +
+                        MyFME.calculateFME(
+                                new BigInteger("7"),
+                                new BigInteger("256"),
+                                new BigInteger("13"))
+        );
+        System.out.println("FME Test End\n");
+        */
 
         k = new Key(n, e);
         sk = new SecretKey(d, n);
@@ -87,6 +92,10 @@ public class MyRSA {
 
     public Key getTheKey(){
         return k;
+    }
+
+    public SecretKey getSecretKey(){
+        return sk;
     }
 
     public String encryption(String plainText){
